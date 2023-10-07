@@ -1,0 +1,267 @@
+<!--cheatSheets_sql.html-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../cheatSheets.css" />
+    <title>cheatSheets_sql</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="../images/icon.png">
+
+    <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="../js/jquery-3.6.3.min.js"></script>
+    <script type="text/javascript" src="../js/cheatSheets.js"></script>
+
+</head>
+<body>
+
+  <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <!-- Шапка -->
+   
+    <header class="nav">
+        <div class="con_nav">
+          <nav class="home">
+            <a href="../index.html"><img src="../images/home.png" width="60px" alt="home" class="logo_nav"></a><!-- Лого -->
+          </nav>
+          <div class="name">
+            <h1>SQL</h1>
+          </div>
+        </div><!-- /Контейнер шапка -->
+    </header><!-- /Тело шапка -->
+
+  <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <!-- Список -->
+
+    <div class="fon_content">
+      <div class="con_content">
+
+          <h2>База данных</h2> 
+
+          <p><i><strong>- это хранилище информации.</strong></i> 
+            С ней можно работать через приложение с помощью API запросов, проверяя заодно 
+            согласованность приложения с базой данных и напрямую через SQL, если backend не готов.</p>
+
+          <p><strong>Реляционные базы данных</strong> состоят из <i>таблиц и связей</i> между ними.<br><br>
+             <strong>Таблица</strong> - совокупность <i>строк(записи)</i> и <i>столбцов(полей)</i>. В пересечении значений <i>ячейка(данные)</i>.<br><br>
+             <strong>Первичный ключ</strong> - это поле с неповторимыми значениями в таблице, нужное для индификации, бывает составной из нескольких полей.</p>
+            
+          <p><strong>СУБД</strong> -система управления базами данных<br><br>
+            Список популярных СУБД:<br>
+            Postgre SQL<br>
+            Oracle<br>
+            My SQL<br>
+            Microsoft SQL Server</p>
+
+          <p><strong>Комментарий</strong> - это поясняющий текст, который вставляют в запрос.<br>
+            -- однострочный комментарий SQL<br>
+            /* многострочный комментарий SQL */</p>
+            
+          <p><strong>Запрос</strong> - команда к базе данных.</p>
+          <p><strong>Оператор</strong> - спецслово или символ (пример: SELECT).</p>
+  
+          <p>Бесплатные программы для установки локального сервера:<br><br>
+          <strong>MAMP</strong> - для Windows, Mac<br>
+          <strong>XAMPP</strong> - для Linux</p>
+
+          <h2>Типы данных:</h2>
+          
+          <p>1. Числовые<br>
+             <strong>INT</strong> - числа(integer) целочисленный тип<br>
+             <strong>REAL</strong> - число с плавающей точкой(до 6 десятичных разрядов)<br><br>
+             2. Строковые, значения в кавычках пример: "Значения"<br>
+             <strong>VARCHAR(n)</strong> - небольшая строка до 255 символов, n - ограничение. Заводит любую строку любой длины короче n.<br>
+             <strong>TEXT</strong> - для большого объема любой длинны<br><br>
+             3. Дата и время, значения заключают в кавычки.<br>
+             <strong>timestamp</strong> - дата и время<br>
+             <strong>DATE</strong> - дата<br><br>
+             4. Логический<br>
+             <strong>boolean</strong> - логический тип данных<br>
+             <strong>TRUE</strong> - истина<br>
+             <strong>FALSE</strong> - ложь<br>
+             <strong>NULL</strong> - неизвестно</p>
+
+          <h2>Базы данных и консоль</h2>
+
+          <p><strong>psql</strong> - это клиент, который помогает работать с Postgre SQL<br><br> 
+
+          Подключиться к удаленному серверу команда:<br>
+          <strong>psql -Uимя пользователя</strong> ввести пароль и нажать ENTER<br>
+          - Ключ <strong>U</strong> указывает, что для получения используется <strong>имя пользователя</strong><br><br>
+
+          команды в psql:<br>
+          <strong>\?</strong> - справочник команд<br>
+          <strong>q</strong> - выйти из справочника команд<br>
+          <strong>\q</strong> - выйти из psql<br>
+          <strong>\l</strong> - покажет список баз данных<br>
+          <strong>\c name</strong> - подключит к базе данных с названием name<br>
+          <strong>\dt</strong> - список таблиц в базе данных<br><br> 
+
+          <strong>ДАМП базы</strong> - это файл набором SQL команд, который позволяет воссоздать базу данных, таблицы и восстановить информацию<br>
+          - создание дампа: <strong>pg_dump имя базы данных > путь и имя файла дампа</strong>.<br><br>
+
+          <strong>pg_dump</strong> - встроенная СУБД PostgreSQL - вводить снаружи без подключения к СУБД<br>
+          <strong>имя базы данных</strong> - имя нужной БД<br>
+          <strong>путь и имя файла дампа</strong> - имя и путь куда сохранить дамп.<br><br>
+
+          <strong>!!! У пользователя под которым вводиться команда должны быть права на это !!!</strong><br><br>
+
+          - восстановление дампа: <strong>psql имя базы данных < путь и имя дампа</strong>.<br><br>
+
+          - создать базу данных: <strong>createdb -T templateO имя базы данных templateO</strong> - шаблон, который создаст чистую БД</p>
+          
+          <h2>Связи с таблицами</h2>
+
+          <div class="con_img">
+            <img src="../images/sql_drawio.png" class="img">
+          </div>
+
+          <p><strong>ER-диаграммы</strong> - визуализирует структуру баз данных<br>
+          <strong>PK</strong> - первичный ключ<br>
+          <strong>FK</strong> - внешний(вторичный)ключ</p>
+
+          <h2>Базы данных и таблицы</h2>
+
+          <p><strong>CREATE DATABASE название базы;</strong> - команда на создание базы данных.<br>
+          <strong>DROP DATABASE название базы;</strong> - команда на удаление базы данных.<br><br>
+          
+          <strong>CREATE TABLE название базы (id INT NOT NULL AUTO_INCREMENT, name VARCHAR (30), email VARCHAR (40), bio TEXT, birth DATE, PRIMARY KEY(id));</strong> - создание таблицы.<br><br>
+          Где:<br>
+          <strong>id, name, email, bio, birth</strong> - придуманные названия полей.<br>
+          <strong>INT, VARCHAR, TEXT, DATE</strong> - типы данных.<br>
+          <strong>NOT NULL</strong> - не может быть пустым.<br>
+          <strong>(30), (40)</strong> - количество символов в поле.<br>
+          <strong>AUTO_INCREMENT</strong> - автозаполнение следующим по счету значением.<br>
+          <strong>PRIMARY KEY(id)</strong> - назначает поле id первичным ключом должно быть уникальное не повторяемое значение.<br><br>
+          
+          <strong>DROP TABLE название таблицы;</strong> - команда на удаление таблицы.<br>
+          <strong>ALTER TABLE название таблицы ADD название поля тип данных;</strong> - добавить поле в таблицу.<br>
+          <strong>ALTER TABLE название таблицы DROP COLUMN название поля;</strong> - удалить поле из таблицы.<br><br>
+
+          <strong>INSERT INTO название таблицы (name, email, bio, birth) VALUES ("ВАНЯ", "vano@yandex.com", "Родился в Самаре, живёт в Москве", 1970-03-02);</strong> - добавление данных в таблицу.<br>
+          - названия полей в свободном порядке через запятую<br>
+          - значения через запятую в том же порядке в каком записаны названия полей<br>
+          - поле первичного ключа вписывать не нужно у него само заполнение<br>
+          - в те поля что не вписали значение присвоится NULL<br><br>
+        
+          <strong>ALTER TABLE название таблицы CHANGE название поля которое меняем название нового поля DATE NOT NULL;</strong> - изменение поля в таблице.<br>
+          - если название не меняем пишем старое<br>
+          <strong>DATE</strong> - типы данных<br>
+          <strong>NOT NULL</strong> - не может быть пустым можно использовать для обязательных полей<br><br>
+
+          <strong>INSERT INTO название таблицы (названия полей через запятую) VALUES (значения через запятую), (значения через запятую), (значения через запятую);</strong> - множественные добавления полей.<br><br>
+          <strong>UPDATE название таблицы SET название поля = новое значение WHERE условие;</strong> - обновление значений в поле.<br>
+          - пример UPDATE man SET name = "Саша" WHERE id = 5;<br><br>
+
+          <strong>UPDATE название таблицы SET название поля = новое значение, название поля = новое значение, название поля = новое значение WHERE условие AND условие_2;</strong> - обновление сразу нескольких полей.<br>
+
+          <strong>DELETE FROM название таблицы WHERE условие;</strong> или <strong>DELETE FROM название таблицы;</strong> - удаление записей из таблицы.<br>
+          <strong>TRUNCATE название таблицы;</strong> - очистка таблицы.</p>
+
+          <h2>Выборка из таблицы</h2>
+          
+          <p><strong>SELECT * FROM название таблицы;</strong> - выбрать все значения из таблицы.<br>
+          <strong>*</strong> - обозначает выбрать всё.<br>
+          <strong>SELECT названия полей через запятую если их несколько FROM название таблицы;</strong> - выбрать определенные поля.<br>
+          <strong>SELECT * FROM название таблицы WHERE условие  AND условие_2 OR условие_3;</strong> - выбрать с несколькими условиями.</p>
+
+          <h2>Операторы</h2>
+
+          <p><strong>></strong> - больше<br>
+          <strong><</strong> - меньше<br>
+          <strong>=</strong> - равно<br>
+          <strong><></strong> или <strong>!=</strong> - не равно<br>
+          <strong>>=</strong> - больше либо равно<br>
+          <strong><=</strong> - меньше либо равно<br>
+          <strong>IS</strong>- является<br>
+          <strong>NOT</strong> - не является или IS NOT к примеру IS NOT NULL<br>
+          <strong>AND</strong> - все условия соответствуют<br>
+          <strong>OR</strong> - хотя бы одно условие соответствует<br><br>
+
+          - условий может быть сколько угодно<br>
+          - <strong>WHERE условие AND NOT условие_2</strong> когда соответствует первому условию и не соответствует второму<br><br>
+
+          <strong>CASE</strong> - в случае когда<br> 
+          <strong>CASE WHEN условие THEN результат</strong> (если условие верное) <strong>ELSE результат_2</strong> (если условие не верное) <strong>END;</strong><br><br>
+
+        
+          <strong>SELECT DISTINCT название поля FROM название таблицы;</strong> - чтоб исключить повторяющиеся значения.<br>
+          <strong>SELECT * FROM название таблицы LIMIT 2;</strong> - задать лимит 2 строки.<br>
+          <strong>SELECT * FROM название таблицы LIMIT 2,3;</strong> - пропустит 2 строчки, а затем 3 выведет 3-5 строчку.<br>
+          <strong>SELECT * FROM название таблицы ORDER BY id LIMIT 2;</strong> - отсортировать по полю.<br>
+          - <strong>LIMIT</strong> всегда в конце, <strong>ORDER BY</strong> после <strong>WHERE</strong> сортирует без операторов в порядке возрастания.<br>
+          <strong>SELECT * FROM название таблицы ORDER BY id DESC LIMIT 2;</strong> - отсортировать в порядке убывания.<br>
+          <strong>SELECT * FROM название таблицы WHERE id BETWEEN 2 AND 6 AND id <> 4;</strong> - выбрать где id от 2 до 6 включительно, без 4 id.<br> 
+          <strong>SELECT * FROM название таблицы WHERE id IN (2, 8);</strong> - выберет id 2 и 8.<br>
+          <strong>SELECT * FROM название таблицы WHERE id NOT IN (2, 8);</strong> - исключит из выбора id 2 и 8.<br>
+          <strong>SELECT * FROM название таблицы WHERE name LIKE "И%";</strong> - выбрать все name начинающиеся на И.<br>
+          <strong>'%ИВА%'</strong> - выберет все где в середине ИВА<br><br>
+          
+          <strong>_</strong> - заменяет одно значение<br>
+          <strong>%</strong> - заменяет любое количество символов и даже пустоту<br>
+
+          Если нужно найти _ или % символы их нужно экранировать. Экранирующий символ любой, главное чтоб не встречался в сочетании со значениями _ и % например / вот пример с ним:<br>
+          WHERE название столбца LIKE '/%' ESCAPE '/' или c ! WHERE название столбца LIKE '!%' ESCAPE '!'<br><br>
+
+          
+          Индексы нужны для ускорения поиска по полю<br>
+          <strong>CREATE INDEX название индекса ON название таблицы (поле к которому добавляем индекс название);</strong> - добавить к полю индекс.<br>
+          <strong>ROP INDEX название индекса ON название таблицы;</strong> - удалить индекс.<br><br>
+        
+          PRIMARY KEY(id) - создать первичный ключ для поля id сделать его ключом<br>
+          FOREIGN KEY(название вторичного ключа) REFERENCES название таблицы куда ссылается ключ(название поля из таблицы для сращивания); - создаем вторичный ключ.
+          - <strong>ПИШУТСЯ В КОНЦЕ ЗАПРОСА ПРИ СОЗДАНИИ И РЕДАКТИРОВАНИИ ТАБЛИЦЫ</strong><br><br>
+          
+          <strong>FROM название таблицы</strong> сращивания 
+          <strong>INNER JOIN название таблицы</strong> которую сращивают <strong>ON название таблицы</strong> сращивания<strong>.название поля</strong> в этой таблице для склейки <strong>= название таблицы</strong> которую сращивают<strong>.название поля</strong> в этой таблице для склейки<strong>;</strong><br>
+          пример: <strong>FROM people INNER JOIN orders ON people.id = orders.personid;</strong> - команда для сращивания.<br>
+          
+          <strong>SELECT имя таблицы.название поля</strong> - при сращивании указывают имя таблицы к полю при выводе</p>
+        
+          <div class="con_img">
+              <img src="../images/sql_drawio_1.png" class="img">
+                <p>Данные которые он берет - это строки из выведенных полей</p>
+          </div>
+        
+         <p><strong>Псевдонимы</strong> - переименование полей во время выборки<br>
+
+         пример: <strong>SELECT name AS ИМЯ</strong><br><br>
+
+         <strong>SELECT CONCAT('Имя: ', name, ', День рождения: ', birth) AS Информация</strong> - объединит несколько полей и фраз в поле информация и выведет:<br>
+         <strong>Информация</strong><br>
+         <strong>Имя: Алексей, День рождения: 03.04.2010</strong><br><br>
+        
+         <strong>SELECT p.id, p.name FROM people AS p;</strong>  - псевдонимы можно использовать для названий таблиц.<br><br>
+
+         <strong>COUNT(название столбца)</strong> - возвращает число строк в столбце.<br>
+         <strong>COUNT(*)</strong> - возвращает общее количество строк в таблице.<br>
+         <strong>COUNT(DISTINCT название столбца)</strong> - возвращает количество уникальных строк в столбце.<br><br>
+
+         <strong>SELECT COUNT(id)</strong> - вызывает количество id<br>
+         <strong>SELECT MIN(price)</strong> - выведет минимальное значение price<br>
+         <strong>SELECT MAX(price)</strong> - выведет максимальное значение price<br>
+         <strong>SELECT AVG(price)</strong> - выведет средне арифметическое значение price<br>
+         <strong>SELECT SUM(price)</strong> - выведет сумму значений price<br>
+         <strong>SELECT UCASE(title) AS title</strong> - выведет все значения title в верхнем регистре<br>
+         <strong>SELECT LCASE(title) AS title</strong> - выведет все значения title в нижнем регистре<br>
+         <strong>GROUP BY</strong> - группирует по полям при использовании функции, вписывается поле которое не использовало функцию, но функция работала на него<br>
+        пример: <strong>SELECT price, COUNT(price) FROM shop GROUP BY price HAVING COUNT(price) > 1;</strong> - HAVING это условие для функций</p>
+      
+    </div>
+  </div>
+
+  <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <!-- Подвал -->
+
+    <footer class="footers">
+        <div class="con_footers">
+        
+        <div class="footer_avtor">
+            <img src="../images/signature.png" class="signature"> 
+        </div>
+        
+       </div><!-- /Контейнер подвал -->
+    </footer><!-- /Тело подвал -->
+
+</body>
