@@ -1,65 +1,94 @@
-<!--index.html-->
+<!--index.html(home)-->
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="cheatSheets.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>cheatSheets</title>
-    <link type="image/png" sizes="16x16" rel="icon" href="images\icon.png">
+    <link type="image/png" sizes="16x16" rel="icon" href="images\icon.png" />
 
-    <link rel="stylesheet" href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flexboxgrid2@7.2.1/flexboxgrid2.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
-    <script type="text/javascript" src="js/cheatSheets.js"></script>
-</head>
-<body>
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <header id="header" class="nav"></header>
+    <!-- Шапка -->
 
-  <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-  <!-- Шапка -->
-   
-    <header class="nav">
-        <div class="con_nav">
-    
-          <h1>Шпаргалки</h1>
-
-        </div><!-- /Контейнер шапка -->
-    </header><!-- /Тело шапка -->
-
-  <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-  <!-- Список -->
+    <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!-- Список -->
 
     <div class="fon_content">
-        <div class="con_content">
-            <dl>
-               <dt><a href="files/cheatSheets_sql.html">SQL:</a></dt><hr><dd>Язык запросов к релеционной базе данных.</dd><hr>
-               <dt><a href="files/cheatSheets_block.html" >Блок-схема:</a></dt><hr><dd>Распространённый тип схем описывающих алгоритмы или процессы, в которых отдельные шаги изображаются в виде блоков различной формы,
-                 соединённых между собой линиями, указывающими направление последовательности.</dd><hr>
-               <dt><a href="files/cheatSheets_qa.html" >Профессия тестировщик:</a></dt><hr><dd>Тестировщики - это люди, которые проверяют, как работает 
-                программа или приложение.</dd><hr>
-               <dt><a href="files/cheatSheets_types_of_testing.html" >Виды тестирования:</a></dt><hr><dd>Виды и методики тестирования.</dd><hr>
-               <dt><a href="files/cheatSheets_design_test.html" >Тест дизайн:</a></dt><hr><dd>— это этап процесса тестирования ПО, на котором 
-                проектируются и создаются тестовые случаи (тест-кейсы).</dd><hr>
-                <dt><a href="files/cheatSheets_test_documentation.html" >Тестовая документация:</a></dt><hr><dd>Тест план, Чек-лист, Тест-кейс, Баг Репорт.</dd><hr>
-               <dt><a href="files/cheatSheets_Git.html" >Git</a></dt><dd>Система контроля и управления версиями.</dd>
-             
-            </dl>
-        </div>
+      <div class="con_content">
+        <dl>
+          <dt><a href="templates/cheatSheets_sql.html">jQuery:</a></dt>
+          <hr />
+          <dd>
+            — библиотека для языка программирования JavaScript, набор
+            инструментов для веб-разработки. С ее помощью разработчик обращается
+            к разным элементам интернет-страницы и управляет ее содержимым.
+          </dd>
+          <hr />
+          <dt><a href="templates/cheatSheets_sql.html">SQL:</a></dt>
+          <hr />
+          <dd>Язык запросов к релеционной базе данных.</dd>
+          <hr />
+          <dt><a href="templates/cheatSheets_block.html">Блок-схема:</a></dt>
+          <hr />
+          <dd>
+            Распространённый тип схем описывающих алгоритмы или процессы, в
+            которых отдельные шаги изображаются в виде блоков различной формы,
+            соединённых между собой линиями, указывающими направление
+            последовательности.
+          </dd>
+          <hr />
+          <dt>
+            <a href="templates/cheatSheets_qa.html">Профессия тестировщик:</a>
+          </dt>
+          <hr />
+          <dd>
+            Тестировщики - это люди, которые проверяют, как работает программа
+            или приложение.
+          </dd>
+          <hr />
+          <dt>
+            <a href="templates/cheatSheets_types_of_testing.html"
+              >Виды тестирования:</a
+            >
+          </dt>
+          <hr />
+          <dd>Виды и методики тестирования.</dd>
+          <hr />
+          <dt>
+            <a href="templates/cheatSheets_design_test.html">Тест дизайн:</a>
+          </dt>
+          <hr />
+          <dd>
+            — это этап процесса тестирования ПО, на котором проектируются и
+            создаются тестовые случаи (тест-кейсы).
+          </dd>
+          <hr />
+          <dt>
+            <a href="templates/cheatSheets_test_documentation.html"
+              >Тестовая документация:</a
+            >
+          </dt>
+          <hr />
+          <dd>Тест план, Чек-лист, Тест-кейс, Баг Репорт.</dd>
+          <hr />
+          <dt><a href="templates/cheatSheets_Git.html">Git</a></dt>
+          <dd>Система контроля и управления версиями.</dd>
+        </dl>
+      </div>
     </div>
+    <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-  <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-  <!-- Подвал -->
-
-    <footer class="footers">
-        <div class="con_footers">
-        
-        <div class="footer_avtor">
-            <img src="images/signature.png" class="signature"> 
-        </div>
-        
-       </div><!-- /Контейнер подвал -->
-    </footer><!-- /Тело подвал -->
-
-</body>
-
+    <footer id="footer" class="footer"></footer>
+    <!-- Подвал -->
+  </body>
+</html>

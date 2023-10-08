@@ -1,0 +1,10 @@
+/*footer.css(Подвал)*/
+
+.footer {
+    background: url(../images/nav2.png) center no-repeat; /*Установит фон элемента*/
+    background-size: cover; /*Растянет фон по размеру контейнера*/
+} /*Тело подвал*/
+
+.signature {
+    padding-left: 5%; /*Внутренний отступ слева*/
+} /*Логотип автора*/

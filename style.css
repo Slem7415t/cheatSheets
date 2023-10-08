@@ -1,0 +1,33 @@
+/*style.css(Основной css)*/
+
+@import "cheatSheets.css";
+@import "/styles/footer.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
