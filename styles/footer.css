@@ -1,6 +1,9 @@
 /*footer.css(Подвал)*/
 
 .footer {
+    margin-top: auto;
+    width: 100%;
+    padding: 30px 10px 20px;
     background: url(../images/nav2.png) center no-repeat; /*Установит фон элемента*/
     background-size: cover; /*Растянет фон по размеру контейнера*/
 } /*Тело подвал*/
