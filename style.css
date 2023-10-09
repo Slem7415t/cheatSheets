@@ -1,42 +1,58 @@
 /*style.css(Основной css)*/
 
 @import "cheatSheets.css";
+@import "/styles/header.css";
 @import "/styles/cheatSheets_jquery.css";
 @import "/styles/footer.css";
 
+@font-face {
+	font-family: 'Geologica', sans-serif;
+	src: url(/styles/fonts/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf); 
+}
+
 * {
+    font-family: 'Geologica', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+:root{
+    --h1_shadow: #000000;
+    --black: #000000;
+    --grey: #f5f0f0;
+    --while: #ffffff;
+    --red: #f5350e;
+    --red-yellow: #886A3C;
+    --green: #2AA17D;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-width: 320px;
 }
 
 main {
     display: flex;
     width: 100%;
-    flex: 1;
+    flex-grow: 1;
 }
 
 .container {
+    margin: 0 auto;
     max-width: 1240px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
+.row {display: flex;}
+
 .col {
     display: flex;
     flex-direction: column;
-}
-
-.row {
-    display: flex;
 }
 
 .item {
@@ -44,4 +60,25 @@ main {
     align-items: center;
     justify-content: center;
     flex: 1;
+}
+
+.f1 {flex: 1;}
+
+.jcc {justify-content: center;}
+.jcsb {justify-content: space-between;}
+
+.p10 {padding: 10px;}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  line-height: 28px;
+  margin: 28px 0;
+  letter-spacing: -1px;
+  text-shadow: 10px 10px 10px var(--h1_shadow), -10px -10px 10px var(--h1_shadow);
+}
+
+h2, h3, h4 {
+    text-shadow: 1px 2px 5px var(--green);
+    padding: 10px;
 }

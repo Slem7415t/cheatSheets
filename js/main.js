@@ -1,5 +1,6 @@
 /*main.js(Основной js)*/
 
+// import { getjQueryPages } from "./cheatSheets_jquery.js";
 import { getBackgroundPages } from "./modules/gradients.js";
 
 $(function () {
@@ -11,6 +12,15 @@ $(function () {
 
 $('document').ready(function() {
 
+    $('.head_hiden').height($('header').height());
+    /*блок под шапкой*/
+
+    // console.log($('header')[0].clientHeight);
+    // console.log($('.con_nav').height());
+    console.log($('header')[0].clientHeight);
+    console.log($('header'));
+
+    // getjQueryPages();
     getBackgroundPages();
 
 });
