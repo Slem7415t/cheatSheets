@@ -5,5 +5,5 @@ export function getBackgroundPages() {
     timer = setInterval(function() {
         degress++;
         $('.fon_content').css('background', 'linear-gradient(' + degress + 'deg, #ffffff, #d1d0d0');
-    }, 5000 / 360);
+    }, 10000 / 360);
 }; /*Фон страницы*/

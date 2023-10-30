@@ -17,7 +17,7 @@ a:hover {font-size: 28px; /* Размер шрифта */
 
   } /*Ссылки при наведении*/
 
-dd, p, ol, li, ul, pre {font-size: 18px; /* Размер шрифта */
+dd, p, ol, li, ul, pre, span {font-size: 18px; /* Размер шрифта */
     font-weight: 500; /* Насыщеновсть(толщина) шрифта */
     text-decoration: none; /*Убираем подчеркивание*/
     color: var(--black); /*Цвет текста*/

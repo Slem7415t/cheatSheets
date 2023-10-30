@@ -1,0 +1,88 @@
+<!--cheatSheets_jquery.html-->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>БЭМ</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="../images/icon.png" />
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <script type="text/javascript" src="../js/jquery-3.6.3.min.js"></script>
+    <script type="module" src="../js/main.js"></script>
+  </head>
+  <body>
+    <header id="header_pages" class="header"></header>
+    <!-- Шапка -->
+
+    <main class="fon_content">
+      <div class="container">
+        <h2>БЭМ</h2>
+
+        <p>
+          - компонентный подход к веб-разработке. В его основе лежит принцип
+          разделения интерфейса на независимые блоки. Он позволяет легко и
+          быстро разрабатывать интерфейсы любой сложности и повторно
+          использовать существующий код, избегая «Copy-Paste».
+        </p>
+
+        <h3>Название блока</h3>
+        <p>- характеризует, <b>что это?</b>, а не какой? как выглядит?</p>
+        <span>пр:</span><span>&ltdiv class="error">&lt/div></span>
+        <span>пр ошибки:</span><span>&ltdiv class="red-text">&lt/div></span>
+        <p>Блоки можно вкладывать в друг друга, с любым уровнем вложенности</p>
+
+        <h3>Элемент</h3>
+        <p>
+          - составная часть блока, отделяется от блока двумя подчеркиваниями.
+        </p>
+        <p>- характеризует, <b>что это?</b>, а не какой? как выглядит?</p>
+        <span>пр:</span><span>имя-блока__имя-элемента</span>
+
+        <h3>Модификатор</h3>
+        <p>- отделяется от блока или элемента одним подчеркиванием.</p>
+        <p>
+          - сущность определяет внешний вид, состояние или поведение блока или
+          элемента.
+        </p>
+        <p>
+          - может кроме имени-модификатора, иметь значение-модификатора, которое
+          от имени отделяется одним подчеркиванием.
+        </p>
+        <span>пр:</span
+        ><span>имя-блока_имя-модификатора_значение-модификатора</span
+        ><span
+          >имя-блока__имя-элемента_имя-модификатора_значение-модификатора</span
+        >
+
+        <h3>
+          Стиль написания имен и значений элементов, блоков и модификаторов.
+        </h3>
+
+        <p>
+          - рекомендуется писать через дефис, или все с маленькой буквы, или
+          использовать camelCase.
+        </p>
+        <span>пр:</span>
+        <ul>
+          <li>menuitemvisible</li>
+          <li>menu-item-visible</li>
+          <li>menuItemVisible</li>
+        </ul>
+
+        <h3>Подробнее:</h3>
+        <a href="https://ru.bem.info/"
+          ><span>БЭМ</span><span>ru.bem.info</span></a
+        >
+        <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%AD%D0%9C"
+          ><span>БЭМ — Википедия</span></a
+        >
+      </div>
+    </main>
+
+    <footer id="footer_pages" class="footer"></footer>
+    <!-- Подвал -->
+  </body>
+</html>
