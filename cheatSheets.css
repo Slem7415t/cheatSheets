@@ -1,21 +1,22 @@
 /*cheatSheets.css(Старый css)*/
-
-dt a {text-shadow: 1px 2px 5px var(--green); /*Тень*/
-    font-size: 24px; /* Размер шрифта */
-    font-weight: 700; /* Насыщеновсть(толщина) шрифта */
-    text-decoration: none; /*Убираем подчеркивание*/
-    color: var(--black); /*Цвет текста*/
-    padding: 2px; /*Внутренние отступы*/
-
+dt>a {
+  text-shadow: 1px 2px 5px var(--green); /*Тень*/
+  font-size: 24px; /* Размер шрифта */
+  font-weight: 700; /* Насыщеновсть(толщина) шрифта */
+  text-decoration: none; /*Убираем подчеркивание*/
+  color: var(--black); /*Цвет текста*/
 } /*Ссылки*/
 
-
-a:hover {font-size: 28px; /* Размер шрифта */
+dt {
+    padding: 5px;
     transition: all .3s; /*Анимация*/
-    color: var(--red); /*Цвет текста*/
-    cursor: pointer; /*Курсор*/
+    cursor: pointer; /*Курсор*/ 
+}
 
-  } /*Ссылки при наведении*/
+dt:hover {
+    opacity: 0.7;
+    transform: skew(-20deg);
+}
 
 dd, p, ol, li, ul, pre, span {font-size: 18px; /* Размер шрифта */
     font-weight: 500; /* Насыщеновсть(толщина) шрифта */
@@ -25,6 +26,10 @@ dd, p, ol, li, ul, pre, span {font-size: 18px; /* Размер шрифта */
     padding: 4px; /*Внутренние отступы*/
 
 } /*Определения*/
+
+dd {
+    padding-left: 20px;
+}
 
 .home, .name {
     width: 100%; /*Устанавливает ширину содержимого элемента*/

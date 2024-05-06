@@ -1,14 +1,9 @@
-/*main.js(Основной js)*/
+import {headerDisplay} from './templates/header.js';
+import {footerDisplay} from './templates/footer.js';
+headerDisplay();
+footerDisplay();
 
-// import { getjQueryPages } from "./cheatSheets_jquery.js";
 import { getBackgroundPages } from "./modules/gradients.js";
-
-$(function () {
-    $("#header").load("../templates/header.html");
-    $("#header_pages").load("../templates/header_pages.html");
-    $("#footer").load("../templates/footer.html");
-    $("#footer_pages").load("../templates/footer_pages.html");
-});
 
 $('document').ready(function() {
 
