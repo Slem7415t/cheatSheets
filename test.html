@@ -1,0 +1,66 @@
+<!--index.html(home)-->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>test</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="images\icon.png" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
+    <script type="module" src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header id="header" class="header"></header>
+    <main class="container">
+      <article>
+        <!-- style="resize: none" -->
+        <textarea name="" id="" disabled readonly>
+          <h1></h1>
+
+          $('document').ready(function() {
+
+            $('.head_hiden').height($('header').height());
+            /*блок под шапкой*/
+        
+            // console.log($('header')[0].clientHeight);
+            // console.log($('.con_nav').height());
+            console.log($('header')[0].clientHeight);
+            console.log($('header'));
+        
+            // getjQueryPages();
+            getBackgroundPages();
+        
+        });$('document').ready(function() {
+
+          $('.head_hiden').height($('header').height());
+          /*блок под шапкой*/
+      
+          // console.log($('header')[0].clientHeight);
+          // console.log($('.con_nav').height());
+          console.log($('header')[0].clientHeight);
+          console.log($('header'));
+      
+          // getjQueryPages();
+          getBackgroundPages();
+      
+      });
+
+          .header {
+            width: 100%; /*Устанавливает ширину содержимого элемента*/
+            background: url(../images/nav2.png) center no-repeat; /*Установит фон элемента*/
+            background-size: cover; /*Растянет фон по размеру контейнера*/
+            top: 0; /*Вверх*/
+            position: sticky; /*Фиксирует блок относительно экрана*/
+            color: var(--while); /* Цвет текста */
+        } /*Тело шапка*/
+        </textarea>
+      </article>
+      <aside></aside>
+    </main>
+    <footer id="footer" class="footer"></footer>
+  </body>
+</html>

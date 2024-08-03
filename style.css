@@ -4,17 +4,74 @@
 @import "/styles/header.css";
 @import "/styles/cheatSheets_jquery.css";
 @import "/styles/footer.css";
+@import "./assets/css/templates/test.css";
 
 @font-face {
-	font-family: 'Geologica', sans-serif;
-	src: url(/styles/fonts/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf); 
+	font-family: 'Montserrat', sans-serif;
+	src: url(assets/css/fonts/static/Montserrat-Black.ttf);
+	src: url(assets/css/fonts/static/Montserrat-BlackItalic.ttf);
+	src: url(assets/css/fonts/static/Montserrat-Bold.ttf);
+	src: url(assets/css/fonts/static/Montserrat-BoldItalic.ttf);
+	src: url(assets/css/fonts/static/Montserrat-ExtraBold.ttf);
+	src: url(assets/css/fonts/static/Montserrat-ExtraBoldItalic.ttf);
+	src: url(assets/css/fonts/static/Montserrat-ExtraLight.ttf);
+	src: url(assets/css/fonts/static/Montserrat-ExtraLightItalic.ttf);
+	src: url(assets/css/fonts/static/Montserrat-Italic.ttf);
+	src: url(assets/css/fonts/static/Montserrat-Light.ttf);
+	src: url(assets/css/fonts/static/Montserrat-LightItalic.ttf);
+	src: url(assets/css/fonts/static/Montserrat-Medium.ttf);
+	src: url(assets/css/fonts/static/Montserrat-MediumItalic.ttf);
+	src: url(assets/css/fonts/static/Montserrat-Regular.ttf);
+	src: url(assets/css/fonts/static/Montserrat-SemiBold.ttf);
+	src: url(assets/css/fonts/static/Montserrat-Thin.ttf);
+	src: url(assets/css/fonts/static/Montserrat-ThinItalic.ttf);
+	src: url(assets/css/fonts/static/Montserrat-SemiBoldItalic.ttf);
+	src: url(assets/css/fonts/Montserrat-Italic-VariableFont_wght.ttf);
+	src: url(assets/css/fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 * {
-    font-family: 'Geologica', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box; 
+	color: rgba(0, 0, 0, 1);
+	font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+body {
+	display: flex; 
+	flex-direction: column;
+	align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1240px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+article {
+    flex: 3;
+}
+
+aside {
+    border: 1px solid black;
+	padding: 10px;
+    flex: 1;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 :root{
@@ -25,28 +82,6 @@
     --red: #f5350e;
     --red-yellow: #886A3C;
     --green: #2AA17D;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 320px;
-}
-
-main {
-    display: flex;
-    width: 100%;
-    flex-grow: 1;
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 1240px;
-    min-width: 320px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
 }
 
 .row {display: flex;}
@@ -71,6 +106,7 @@ main {
 .p10 {padding: 10px;}
 
 h1 {
+  color: rgba(255, 255, 255, 1);
   text-align: center;
   font-size: 2em;
   line-height: 28px;
@@ -82,4 +118,13 @@ h1 {
 h2, h3, h4 {
     text-shadow: 1px 2px 5px var(--green);
     padding: 10px;
+}
+
+@media (max-width: 768px) {
+	aside {
+		display: none;
+	}
+	article {
+		flex: 1;
+	}
 }

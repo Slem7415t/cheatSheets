@@ -1,0 +1,91 @@
+<!--index.html(home)-->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Микроразметка</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="images\icon.png" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="text/javascript" src="js/jquery-3.6.3.min.js"></script>
+    <script type="module" src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header id="header" class="header"></header>
+    <main class="container">
+      <article>
+        <h1>
+          Микроразметка — это добавление в существующий HTML-код страницы
+          элементов языка — тегов и атрибутов, которые помогают поисковым ботам
+          распознавать контент и показывать пользователям то, что они ищут.
+        </h1>
+        <section>
+          <h2>Виды микроразметки</h2>
+          <img
+            src="./assets/images/micro_markup/микроразметка.jpg"
+            alt="Виды микроразметки"
+          />
+        </section>
+        <section>
+          <h2>Словари / Schema.org</h2>
+          <ul>
+            Основные сущности словаря:
+            <li>- Action (действие)</li>
+            <li>- BioChemEntity (биохимия)</li>
+            <li>- CreativeWork (творческая работа)</li>
+            <li>- Event (событие)</li>
+            <li>- Intangible (всё нематериальное)</li>
+            <li>- MedicalEntity (медучреждение)</li>
+            <li>- Organization (компания)</li>
+            <li>- Person (человек)</li>
+            <li>- Place (место)</li>
+            <li>- Product (товар)</li>
+            <li>- Taxon (группа существ)</li>
+            <li>- Review (отзыв)</li>
+            <li>- Article (статья)</li>
+            <li>- WPHeader (шапка сайта)</li>
+            <li>- Breadcrumbs (хлебные крошки)</li>
+            <li>- SiteNavigationElement (меню)</li>
+            <li>- Products list (список товаров)</li>
+            <li>- Product → Offer (карточка товара)</li>
+            <li>- Organization и LocalBusiness (адреса и организации)</li>
+          </ul>
+        </section>
+        <h2>Синтаксис(форматы)</h2>
+        <h3>JSON-LD</h3>
+        <p>
+          JavaScript Object Notation for Linked Data - формат описания контента
+          с помощью связанных объектов. Имеет проблемы с поддержкой в Яндексе!
+        </p>
+        <textarea disabled readonly>
+          <script type="application/ld+json">
+            {
+              "@content": "https://schema.org/",
+              "@type": "Product",
+              "name": "Название",
+              "description": "описание",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "ratingCount": "80"
+              },
+              "offers": {
+                "@type": "AggregateOffer",
+                "offerCount": "8",
+                "lowPrice": "441.00",
+                "highPrice": "630.00",
+                "priceCurrency": "RUR"
+              }
+            }
+          </script>
+        </textarea>
+        <p>Официальный сайт - json-ld.org</p>
+      </article>
+      <aside></aside>
+    </main>
+    <footer id="footer" class="footer"></footer>
+  </body>
+</html>
