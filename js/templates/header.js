@@ -15,7 +15,7 @@ export function headerDisplay() {
             <div class="container">
                 <div class="row">
                   <div class="col jcc">
-                    <a class="item header-logo" href="../index.html">
+                    <a class="item header-logo" href="../home">
                       <img src="../images/home.png" alt="home" class="logo btn-logo" />
                     </a><!-- Лого -->
                   </div>
